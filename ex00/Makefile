@@ -2,10 +2,8 @@ NAME = Bureaucrat
 CC = g++
 CFLAGS = -g3 -Wall -Wextra -Werror -std=c++98
 
-SRC = \
-    src/main.cpp \
-    src/Bureaucrat.cpp \
-
+SRC =	src/main.cpp \
+		src/Bureaucrat.cpp \
 
 OBJS = $(notdir $(SRC:.cpp=.o))
 OBJDIR = Bureaucrat_objects
