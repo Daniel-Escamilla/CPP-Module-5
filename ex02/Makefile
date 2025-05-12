@@ -3,8 +3,11 @@ CC = g++
 CFLAGS = -g3 -Wall -Wextra -Werror -std=c++98
 
 SRC =	src/main.cpp \
-		src/Form.cpp \
+		src/AForm.cpp \
 		src/Bureaucrat.cpp \
+		src/RobotomyRequestForm.cpp \
+		src/ShrubberyCreationForm.cpp \
+		src/PresidentialPardonForm.cpp \
 
 OBJS = $(notdir $(SRC:.cpp=.o))
 OBJDIR = Bureaucrat_objects
