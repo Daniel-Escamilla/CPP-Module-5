@@ -6,7 +6,7 @@
 /*   By: daniel-escamilla <daniel-escamilla@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 12:20:40 by descamil          #+#    #+#             */
-/*   Updated: 2025/05/13 01:54:50 by daniel-esca      ###   ########.fr       */
+/*   Updated: 2025/05/13 15:13:45 by daniel-esca      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int main()
 
 	try
 	{
-		Bureaucrat low("Alice", 1500);
+		Bureaucrat low("Alice", 150);
 		Bureaucrat mid("Bob", 70);
 		Bureaucrat high("Carol", 1);
 
