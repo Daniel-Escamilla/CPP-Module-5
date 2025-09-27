@@ -3,35 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel-escamilla <daniel-escamilla@stud    +#+  +:+       +#+        */
+/*   By: descamil <descamil@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 14:30:55 by daniel-esca       #+#    #+#             */
-/*   Updated: 2025/05/13 14:45:24 by daniel-esca      ###   ########.fr       */
+/*   Updated: 2025/09/27 17:23:10 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Intern.hpp"
 
-Intern::Intern()
-{
-
-}
+Intern::Intern() {}
 
 Intern::Intern(const Intern &copy)
 {
 	(void)copy;
 }
 
-Intern::~Intern()
-{
+Intern::~Intern() {}
 
-}
-
-Intern &Intern::operator=(const Intern &copy)
-{
-	(void)copy;
-	return (*this);
-}
+Intern &Intern::operator=(const Intern &copy) { (void)copy; return (*this); }
 
 AForm *Intern::createRobotomyRequest(const std::string &target)
 {
@@ -66,4 +56,25 @@ AForm *Intern::makeForm(const std::string &formName, const std::string &target)
 		}
 	}
 	throw FormNotFoundException();
+}
+
+// FormNotFoundException canonical implementations
+Intern::FormNotFoundException::FormNotFoundException() {}
+
+Intern::FormNotFoundException::FormNotFoundException(const FormNotFoundException &copy)
+{
+	(void)copy;
+}
+
+Intern::FormNotFoundException::~FormNotFoundException() throw() {}
+
+Intern::FormNotFoundException &Intern::FormNotFoundException::operator=(const FormNotFoundException &copy)
+{
+	(void)copy;
+	return *this;
+}
+
+const char *Intern::FormNotFoundException::what() const throw()
+{
+    return ("Intern: Form not found");
 }

@@ -23,16 +23,10 @@ AForm::AForm(std::string name, int SignGrade, int ExecuteGrade)
 		throw Bureaucrat::GradeTooLowException();
 }
 
-AForm::~AForm()
-{
-	
-}
+AForm::~AForm() {}
 
 AForm::AForm(const AForm &copy)
-	: _name(copy._name), _gradeToSign(copy._gradeToSign), _gradeToExecute(copy._gradeToExecute), _signed(copy._signed)
-{
-	
-}
+	: _name(copy._name), _gradeToSign(copy._gradeToSign), _gradeToExecute(copy._gradeToExecute), _signed(copy._signed) {}
 
 AForm &AForm::operator=(const AForm &copy)
 {

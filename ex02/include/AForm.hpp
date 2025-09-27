@@ -44,30 +44,50 @@ class AForm
 		class GradeTooHighException : public std::exception
 		{
 			public:
+				GradeTooHighException();
+				GradeTooHighException(const GradeTooHighException &copy);
+				~GradeTooHighException() throw();
+				GradeTooHighException &operator=(const GradeTooHighException &copy);
 				const char* what() const throw();
 		};
 
 		class GradeTooLowException : public std::exception
 		{
 			public:
+				GradeTooLowException();
+				GradeTooLowException(const GradeTooLowException &copy);
+				~GradeTooLowException() throw();
+				GradeTooLowException &operator=(const GradeTooLowException &copy);
 				const char* what() const throw();
 		};
 
 		class FormNotSignedException : public std::exception
 		{
 			public:
+				FormNotSignedException();
+				FormNotSignedException(const FormNotSignedException &copy);
+				~FormNotSignedException() throw();
+				FormNotSignedException &operator=(const FormNotSignedException &copy);
 				const char* what() const throw();
 		};
 
 		class GradeTooLowExecuteException : public std::exception
 		{
 			public:
+				GradeTooLowExecuteException();
+				GradeTooLowExecuteException(const GradeTooLowExecuteException &copy);
+				~GradeTooLowExecuteException() throw();
+				GradeTooLowExecuteException &operator=(const GradeTooLowExecuteException &copy);
 				const char* what() const throw();
 		};
 
 		class GradeTooHighExecuteException : public std::exception
 		{
 			public:
+				GradeTooHighExecuteException();
+				GradeTooHighExecuteException(const GradeTooHighExecuteException &copy);
+				~GradeTooHighExecuteException() throw();
+				GradeTooHighExecuteException &operator=(const GradeTooHighExecuteException &copy);
 				const char* what() const throw();
 		};
 		

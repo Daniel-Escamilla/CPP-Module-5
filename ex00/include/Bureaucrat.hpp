@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: descamil <descamil@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 12:20:44 by descamil          #+#    #+#             */
-/*   Updated: 2025/05/12 17:20:12 by descamil         ###   ########.fr       */
+/*   Updated: 2025/09/27 13:36:28 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,20 @@ class Bureaucrat
 		class GradeTooHighException : public std::exception
 		{
 			public:
+				GradeTooHighException();
+				GradeTooHighException(const GradeTooHighException &copy);
+				~GradeTooHighException() throw();
+				GradeTooHighException &operator=(const GradeTooHighException &copy);
 				const char *what() const throw();
 		};
-		
+
 		class GradeTooLowException : public std::exception
 		{
 			public:
+				GradeTooLowException();
+				GradeTooLowException(const GradeTooLowException &copy);
+				~GradeTooLowException() throw();
+				GradeTooLowException &operator=(const GradeTooLowException &copy);
 				const char *what() const throw();
 		};
 };

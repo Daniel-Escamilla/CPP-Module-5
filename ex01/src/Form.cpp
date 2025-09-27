@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: descamil <descamil@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 17:52:34 by descamil          #+#    #+#             */
-/*   Updated: 2025/05/12 23:44:38 by descamil         ###   ########.fr       */
+/*   Updated: 2025/09/27 17:22:15 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,7 @@ Form::Form(std::string name, int SignGrade, int ExecuteGrade)
 		throw Bureaucrat::GradeTooLowException();
 }
 
-Form::~Form()
-{
-	
-}
+Form::~Form() {}
 
 Form::Form(const Form &copy)
 	: _name(copy._name), _gradeToSign(copy._gradeToSign), _gradeToExecute(copy._gradeToExecute), _signed(copy._signed)
@@ -69,6 +66,36 @@ const char *Form::GradeTooHighException::what() const throw()
 const char *Form::GradeTooLowException::what() const throw()
 {
 	return ("the grade is too low to sign!");
+}
+
+// GradeTooHighException canonical implementations
+Form::GradeTooHighException::GradeTooHighException() {}
+
+Form::GradeTooHighException::GradeTooHighException(const GradeTooHighException &copy)
+{
+	(void)copy;
+}
+Form::GradeTooHighException::~GradeTooHighException() throw() {}
+
+Form::GradeTooHighException &Form::GradeTooHighException::operator=(const GradeTooHighException &copy)
+{
+	(void)copy;
+	return *this;
+}
+
+// GradeTooLowException canonical implementations
+Form::GradeTooLowException::GradeTooLowException() {}
+
+Form::GradeTooLowException::GradeTooLowException(const GradeTooLowException &copy)
+{
+	(void)copy;
+}
+Form::GradeTooLowException::~GradeTooLowException() throw() {}
+
+Form::GradeTooLowException &Form::GradeTooLowException::operator=(const GradeTooLowException &copy)
+{
+	(void)copy;
+	return *this;
 }
 
 void Form::beSigned(const Bureaucrat &bureaucrat)

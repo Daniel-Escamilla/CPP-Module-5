@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel-escamilla <daniel-escamilla@stud    +#+  +:+       +#+        */
+/*   By: descamil <descamil@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 17:52:02 by descamil          #+#    #+#             */
-/*   Updated: 2025/05/13 14:49:20 by daniel-esca      ###   ########.fr       */
+/*   Updated: 2025/09/27 16:58:20 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

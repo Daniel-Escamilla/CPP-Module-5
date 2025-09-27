@@ -41,12 +41,20 @@ class Form
 		class GradeTooHighException : public std::exception
 		{
 			public:
+				GradeTooHighException();
+				GradeTooHighException(const GradeTooHighException &copy);
+				~GradeTooHighException() throw();
+				GradeTooHighException &operator=(const GradeTooHighException &copy);
 				const char* what() const throw();
 		};
 
 		class GradeTooLowException : public std::exception
 		{
 			public:
+				GradeTooLowException();
+				GradeTooLowException(const GradeTooLowException &copy);
+				~GradeTooLowException() throw();
+				GradeTooLowException &operator=(const GradeTooLowException &copy);
 				const char* what() const throw();
 		};
 };

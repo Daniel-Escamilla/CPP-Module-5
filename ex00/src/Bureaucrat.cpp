@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: descamil <descamil@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 12:20:38 by descamil          #+#    #+#             */
-/*   Updated: 2025/05/12 17:26:19 by descamil         ###   ########.fr       */
+/*   Updated: 2025/09/27 17:20:02 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,7 @@ Bureaucrat::Bureaucrat(std::string const name, int grade)
 		throw GradeTooHighException();
 }
 
-Bureaucrat::~Bureaucrat()
-{
-
-}
+Bureaucrat::~Bureaucrat() {}
 
 Bureaucrat::Bureaucrat(const Bureaucrat &copy)
 	: _name(copy._name) 
@@ -54,9 +51,37 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
 	return "Grade too low!";
 }
 
+Bureaucrat::GradeTooLowException::GradeTooLowException() {}
+
+Bureaucrat::GradeTooLowException::GradeTooLowException(const GradeTooLowException &copy)
+{
+	(void)copy;
+}
+Bureaucrat::GradeTooLowException::~GradeTooLowException() throw() {}
+
+Bureaucrat::GradeTooLowException &Bureaucrat::GradeTooLowException::operator=(const GradeTooLowException &copy)
+{
+	(void)copy;
+	return *this;
+}
+
 const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
 	return "Grade too high!";
+}
+
+Bureaucrat::GradeTooHighException::GradeTooHighException() {}
+
+Bureaucrat::GradeTooHighException::GradeTooHighException(const GradeTooHighException &copy)
+{
+	(void)copy;
+}
+Bureaucrat::GradeTooHighException::~GradeTooHighException() throw() {}
+
+Bureaucrat::GradeTooHighException &Bureaucrat::GradeTooHighException::operator=(const GradeTooHighException &copy)
+{
+	(void)copy;
+	return *this;
 }
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &b)

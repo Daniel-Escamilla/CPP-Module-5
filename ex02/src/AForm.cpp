@@ -23,10 +23,7 @@ AForm::AForm(std::string name, int SignGrade, int ExecuteGrade)
 		throw Bureaucrat::GradeTooLowException();
 }
 
-AForm::~AForm()
-{
-	
-}
+AForm::~AForm() {}
 
 AForm::AForm(const AForm &copy)
 	: _name(copy._name), _gradeToSign(copy._gradeToSign), _gradeToExecute(copy._gradeToExecute), _signed(copy._signed)
@@ -66,9 +63,39 @@ const char *AForm::GradeTooHighException::what() const throw()
 	return ("the grade is too high to sign!");
 }
 
+// GradeTooHighException canonical implementations
+AForm::GradeTooHighException::GradeTooHighException() {}
+
+AForm::GradeTooHighException::GradeTooHighException(const GradeTooHighException &copy)
+{
+	(void)copy;
+}
+AForm::GradeTooHighException::~GradeTooHighException() throw() {}
+
+AForm::GradeTooHighException &AForm::GradeTooHighException::operator=(const GradeTooHighException &copy)
+{
+	(void)copy;
+	return *this;
+}
+
 const char *AForm::GradeTooLowException::what() const throw()
 {
 	return ("the grade is too low to sign!");
+}
+
+// GradeTooLowException canonical implementations
+AForm::GradeTooLowException::GradeTooLowException() {}
+
+AForm::GradeTooLowException::GradeTooLowException(const GradeTooLowException &copy)
+{
+	(void)copy;
+}
+AForm::GradeTooLowException::~GradeTooLowException() throw() {}
+
+AForm::GradeTooLowException &AForm::GradeTooLowException::operator=(const GradeTooLowException &copy)
+{
+	(void)copy;
+	return *this;
 }
 
 const char *AForm::FormNotSignedException::what() const throw()
@@ -76,14 +103,59 @@ const char *AForm::FormNotSignedException::what() const throw()
 	return ("the form is not signed!");
 }
 
+// FormNotSignedException canonical implementations
+AForm::FormNotSignedException::FormNotSignedException() {}
+
+AForm::FormNotSignedException::FormNotSignedException(const FormNotSignedException &copy)
+{
+	(void)copy;
+}
+AForm::FormNotSignedException::~FormNotSignedException() throw() {}
+
+AForm::FormNotSignedException &AForm::FormNotSignedException::operator=(const FormNotSignedException &copy)
+{
+	(void)copy;
+	return *this;
+}
+
 const char *AForm::GradeTooLowExecuteException::what() const throw()
 {
 	return ("the grade is too low to execute!");
 }
 
+// GradeTooLowExecuteException canonical implementations
+AForm::GradeTooLowExecuteException::GradeTooLowExecuteException() {}
+
+AForm::GradeTooLowExecuteException::GradeTooLowExecuteException(const GradeTooLowExecuteException &copy)
+{
+	(void)copy;
+}
+AForm::GradeTooLowExecuteException::~GradeTooLowExecuteException() throw() {}
+
+AForm::GradeTooLowExecuteException &AForm::GradeTooLowExecuteException::operator=(const GradeTooLowExecuteException &copy)
+{
+	(void)copy;
+	return *this;
+}
+
 const char *AForm::GradeTooHighExecuteException::what() const throw()
 {
 	return ("the grade is too high to execute!");
+}
+
+// GradeTooHighExecuteException canonical implementations
+AForm::GradeTooHighExecuteException::GradeTooHighExecuteException() {}
+
+AForm::GradeTooHighExecuteException::GradeTooHighExecuteException(const GradeTooHighExecuteException &copy)
+{
+	(void)copy;
+}
+AForm::GradeTooHighExecuteException::~GradeTooHighExecuteException() throw() {}
+
+AForm::GradeTooHighExecuteException &AForm::GradeTooHighExecuteException::operator=(const GradeTooHighExecuteException &copy)
+{
+	(void)copy;
+	return *this;
 }
 
 void AForm::beSigned(const Bureaucrat &bureaucrat)

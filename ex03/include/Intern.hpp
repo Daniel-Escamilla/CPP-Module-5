@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel-escamilla <daniel-escamilla@stud    +#+  +:+       +#+        */
+/*   By: descamil <descamil@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 14:29:00 by daniel-esca       #+#    #+#             */
-/*   Updated: 2025/05/13 14:41:34 by daniel-esca      ###   ########.fr       */
+/*   Updated: 2025/09/27 16:44:09 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,13 @@ class Intern
 
 		class FormNotFoundException : public std::exception
 		{
+
 			public:
-				const char *what() const throw()
-				{
-					return ("Intern: Form not found");
-				}
+				FormNotFoundException();
+				FormNotFoundException(const FormNotFoundException &copy);
+				~FormNotFoundException() throw();
+				FormNotFoundException &operator=(const FormNotFoundException &copy);
+				const char *what() const throw();
 		};
 };
 
