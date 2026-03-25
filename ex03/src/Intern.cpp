@@ -58,7 +58,6 @@ AForm *Intern::makeForm(const std::string &formName, const std::string &target)
 	throw FormNotFoundException();
 }
 
-// FormNotFoundException canonical implementations
 Intern::FormNotFoundException::FormNotFoundException() {}
 
 Intern::FormNotFoundException::FormNotFoundException(const FormNotFoundException &copy)

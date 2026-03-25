@@ -51,7 +51,6 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
 	return "Grade too low!";
 }
 
-// GradeTooHighException canonical implementations
 Bureaucrat::GradeTooHighException::GradeTooHighException() {}
 
 Bureaucrat::GradeTooHighException::GradeTooHighException(const GradeTooHighException &copy)
@@ -66,7 +65,6 @@ Bureaucrat::GradeTooHighException &Bureaucrat::GradeTooHighException::operator=(
 	return *this;
 }
 
-// GradeTooLowException canonical implementations
 Bureaucrat::GradeTooLowException::GradeTooLowException() {}
 
 Bureaucrat::GradeTooLowException::GradeTooLowException(const GradeTooLowException &copy)

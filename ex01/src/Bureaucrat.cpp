@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 12:20:38 by descamil          #+#    #+#             */
-/*   Updated: 2025/09/27 17:22:00 by descamil         ###   ########.fr       */
+/*   Updated: 2026/03/25 14:56:50 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ const char* Bureaucrat::GradeTooHighException::what() const throw()
 	return "Grade too high!";
 }
 
-// GradeTooHighException canonical implementations
 Bureaucrat::GradeTooHighException::GradeTooHighException() {}
 
 Bureaucrat::GradeTooHighException::GradeTooHighException(const GradeTooHighException &copy)
@@ -71,7 +70,6 @@ Bureaucrat::GradeTooHighException &Bureaucrat::GradeTooHighException::operator=(
 	return *this;
 }
 
-// GradeTooLowException canonical implementations
 Bureaucrat::GradeTooLowException::GradeTooLowException() {}
 
 Bureaucrat::GradeTooLowException::GradeTooLowException(const GradeTooLowException &copy)

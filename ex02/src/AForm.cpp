@@ -63,7 +63,6 @@ const char *AForm::GradeTooHighException::what() const throw()
 	return ("the grade is too high to sign!");
 }
 
-// GradeTooHighException canonical implementations
 AForm::GradeTooHighException::GradeTooHighException() {}
 
 AForm::GradeTooHighException::GradeTooHighException(const GradeTooHighException &copy)
@@ -83,7 +82,6 @@ const char *AForm::GradeTooLowException::what() const throw()
 	return ("the grade is too low to sign!");
 }
 
-// GradeTooLowException canonical implementations
 AForm::GradeTooLowException::GradeTooLowException() {}
 
 AForm::GradeTooLowException::GradeTooLowException(const GradeTooLowException &copy)
@@ -103,7 +101,6 @@ const char *AForm::FormNotSignedException::what() const throw()
 	return ("the form is not signed!");
 }
 
-// FormNotSignedException canonical implementations
 AForm::FormNotSignedException::FormNotSignedException() {}
 
 AForm::FormNotSignedException::FormNotSignedException(const FormNotSignedException &copy)
@@ -123,7 +120,6 @@ const char *AForm::GradeTooLowExecuteException::what() const throw()
 	return ("the grade is too low to execute!");
 }
 
-// GradeTooLowExecuteException canonical implementations
 AForm::GradeTooLowExecuteException::GradeTooLowExecuteException() {}
 
 AForm::GradeTooLowExecuteException::GradeTooLowExecuteException(const GradeTooLowExecuteException &copy)
@@ -143,7 +139,6 @@ const char *AForm::GradeTooHighExecuteException::what() const throw()
 	return ("the grade is too high to execute!");
 }
 
-// GradeTooHighExecuteException canonical implementations
 AForm::GradeTooHighExecuteException::GradeTooHighExecuteException() {}
 
 AForm::GradeTooHighExecuteException::GradeTooHighExecuteException(const GradeTooHighExecuteException &copy)

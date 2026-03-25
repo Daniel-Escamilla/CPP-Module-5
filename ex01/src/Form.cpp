@@ -68,7 +68,6 @@ const char *Form::GradeTooLowException::what() const throw()
 	return ("the grade is too low to sign!");
 }
 
-// GradeTooHighException canonical implementations
 Form::GradeTooHighException::GradeTooHighException() {}
 
 Form::GradeTooHighException::GradeTooHighException(const GradeTooHighException &copy)
@@ -83,7 +82,6 @@ Form::GradeTooHighException &Form::GradeTooHighException::operator=(const GradeT
 	return *this;
 }
 
-// GradeTooLowException canonical implementations
 Form::GradeTooLowException::GradeTooLowException() {}
 
 Form::GradeTooLowException::GradeTooLowException(const GradeTooLowException &copy)
